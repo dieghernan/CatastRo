@@ -193,6 +193,12 @@
   <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_that.html">expect_that</a></span><span class="op">(</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">coord</span><span class="op">)</span> <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">SRS</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://testthat.r-lib.org/reference/oldskool.html">is_true</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
 <span class="op">}</span><span class="op">)</span></code></pre></div>
 <pre><code>## ── Warning (&lt;text&gt;:4:3): giving only the cadastral reference ───────────────────
+## `expect_that()` was deprecated in the 3rd edition.
+## Backtrace:
+##  1. testthat::expect_that(...)
+##  2. testthat:::edition_deprecate(3, "expect_that()")
+## 
+## ── Warning (&lt;text&gt;:4:3): giving only the cadastral reference ───────────────────
 ## `is_true()` is deprecated. Please use `expect_true()` instead.
 ## Backtrace:
 ##  1. testthat::expect_that(...)
