@@ -88,21 +88,21 @@
 <h2 id="query-a-coordinate">Query a coordinate<a class="anchor" aria-label="anchor" href="#query-a-coordinate"></a>
 </h2>
 <p>The function <code><a href="reference/get_rc.html">get_rc()</a></code> receives the coordinates (lat,lon) and the spatial reference used. The return is the cadastral reference of the property in that spatial point, as well as the direction (town street and number).</p>
-<p>```{r. eval=FALSE} library(CatastRo)</p>
-<p>reference &lt;- get_rc(lat, lon, SRS) print(reference)</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>It can be requested to get all the cadastral references <span class="cf">in</span> a square of <span class="dv">50</span><span class="op">-</span>meters</span>
-<span id="cb2-2"><a href="#cb2-2"></a>side centered <span class="cf">in</span> the <span class="kw">coordinates</span> (lat,lon) throught the <span class="cf">function</span> <span class="st">`</span><span class="dt">near_rc()</span><span class="st">`</span>.</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="st">```</span><span class="dt">r</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="dt">references &lt;- near_rc(lat, lon, SRS)</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="dt">print(references)</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ropenspain.github.io/CatastRo/">CatastRo</a></span><span class="op">)</span>
+
+<span class="va">reference</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_rc.html">get_rc</a></span><span class="op">(</span><span class="va">lat</span>, <span class="va">lon</span>, <span class="va">SRS</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">reference</span><span class="op">)</span></code></pre></div>
+<p>It can be requested to get all the cadastral references in a square of 50-meters side centered in the coordinates (lat,lon) throught the function <code><a href="reference/near_rc.html">near_rc()</a></code>.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">references</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/near_rc.html">near_rc</a></span><span class="op">(</span><span class="va">lat</span>, <span class="va">lon</span>, <span class="va">SRS</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">references</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="query-cpmrc">Query CPMRC<a class="anchor" aria-label="anchor" href="#query-cpmrc"></a>
 </h2>
 <p>It is possible, as well, the opposite. Given to the function <code><a href="reference/get_coor.html">get_coor()</a></code> a cadastral reference, <code><a href="reference/get_coor.html">get_coor()</a></code> returns its coordinates (lat,lon) in a particular SRS moreover the direction (town, street and number).</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">direction</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_coor.html">get_coor</a></span><span class="op">(</span><span class="va">Cadastral_Reference</span>, <span class="va">SRS</span>, <span class="va">Province</span>, <span class="va">Municipality</span><span class="op">)</span>
 
 <span class="co"># The argument SRS could be missed, in that case, `get_coor()` returns the coordinates in the SRS used by Google Maps.</span>
