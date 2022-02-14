@@ -20,11 +20,14 @@ municipality using the INSPIRE ATOM service."><!-- mathjax --><script src="https
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-2">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../articles/CatastRo.html">Get started</a>
-</li>
-<li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
+</li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/ovcserv.html">OVCCoordenadas Web Service</a>
+  </div>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
@@ -107,18 +110,23 @@ default is <code>FALSE</code>.</p></dd>
 <p>Other INSPIRE: 
 <code><a href="catr_atom_ad_db.html">catr_atom_ad_db_all</a>()</code>,
 <code><a href="catr_atom_ad.html">catr_atom_ad</a>()</code>,
+<code><a href="catr_atom_bu_db.html">catr_atom_bu_db_all</a>()</code>,
+<code><a href="catr_atom_bu.html">catr_atom_bu</a>()</code>,
 <code><a href="catr_atom_cp_db.html">catr_atom_cp_db_all</a>()</code></p>
 <p>Other INSPIRE ATOM services:
 <code><a href="catr_atom_ad_db.html">catr_atom_ad_db_all</a>()</code>,
 <code><a href="catr_atom_ad.html">catr_atom_ad</a>()</code>,
+<code><a href="catr_atom_bu_db.html">catr_atom_bu_db_all</a>()</code>,
+<code><a href="catr_atom_bu.html">catr_atom_bu</a>()</code>,
 <code><a href="catr_atom_cp_db.html">catr_atom_cp_db_all</a>()</code></p>
 <p>Other spatial: 
-<code><a href="catr_atom_ad.html">catr_atom_ad</a>()</code></p></div>
+<code><a href="catr_atom_ad.html">catr_atom_ad</a>()</code>,
+<code><a href="catr_atom_bu.html">catr_atom_bu</a>()</code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \dontrun{</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
 <span class="r-in"><span class="va">s</span> <span class="op">&lt;-</span> <span class="fu">catr_atom_cp</span><span class="op">(</span><span class="st">"Melque"</span>,</span>
 <span class="r-in">  to <span class="op">=</span> <span class="st">"Segovia"</span>,</span>
 <span class="r-in">  what <span class="op">=</span> <span class="st">"parcel"</span></span>
@@ -148,7 +156,7 @@ default is <code>FALSE</code>.</p></dd>
     <div class="row">
       <div class="col-md">
         <h4 data-toc-skip>About <img src="../logo.png" alt="CatastRo Logo" height="24"> CatastRo</h4>
-        <p>Developed by <a href="https://github.com/DelgadoPanadero" class="external-link">Angel Delgado-Panadero</a>, Iñaki Ucar, Diego Hernangómez.</p>
+        <p>Developed by <a href="https://github.com/DelgadoPanadero" class="external-link">Angel Delgado-Panadero</a>, Diego Hernangómez.</p>
         <p>Part of the <span class="ROS-light">rOpenSpain</span> project.</p>
         <hr class="d-md-none"></div>
       <div class="col-md offset-md-4">
