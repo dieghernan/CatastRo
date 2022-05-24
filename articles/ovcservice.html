@@ -15,8 +15,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.0/font.css" rel="stylesheet">
-<link href="../deps/_Roboto%20Mono-0.4.0/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_Roboto-0.4.1/font.css" rel="stylesheet">
+<link href="../deps/_Roboto%20Mono-0.4.1/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="OVCCoordenadas Web Service">
@@ -39,10 +39,11 @@
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     
-    <img src="../logo.png" alt="CatastRo-logo" id="ROS-navbar-logo"><a class="navbar-brand me-2" href="../index.html">CatastRo</a>
+    <div>
+      <img src="../logo.png" alt="CatastRo-logo" id="ROS-navbar-logo"><a class="navbar-brand me-2" href="../index.html">CatastRo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9000</small>
-
+      <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1.9000</small>
+    </div>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -111,17 +112,17 @@
 </h2>
 <p>The OVCCoordenadas Web Service can be reached using the following functions:</p>
 <ul>
-<li><code><a href="../reference/catr_ovc_rccoor.html">catr_ovc_rccoor()</a></code></li>
-<li><code><a href="../reference/catr_ovc_rccoor_distancia.html">catr_ovc_rccoor_distancia()</a></code></li>
-<li><code><a href="../reference/catr_ovc_cpmrc.html">catr_ovc_cpmrc()</a></code></li>
+<li><code><a href="../reference/catr_ovc_get_rccoor.html">catr_ovc_get_rccoor()</a></code></li>
+<li><code><a href="../reference/catr_ovc_get_rccoor_distancia.html">catr_ovc_get_rccoor_distancia()</a></code></li>
+<li><code><a href="../reference/catr_ovc_get_cpmrc.html">catr_ovc_get_cpmrc()</a></code></li>
 </ul>
 </div>
 <div class="section level2">
 <h2 id="reverse-geocoding-cadastral-references">Reverse Geocoding Cadastral References<a class="anchor" aria-label="anchor" href="#reverse-geocoding-cadastral-references"></a>
 </h2>
-<p>The function <code><a href="../reference/catr_ovc_rccoor.html">catr_ovc_rccoor()</a></code> receives the coordinates (<em>lat</em> and <em>lon</em>) and the spatial reference system (SRS) used to express them. The return is a tibble with the cadastral reference of the property in that spatial point, including also other information as the address (town street and number).</p>
+<p>The function <code><a href="../reference/catr_ovc_get_rccoor.html">catr_ovc_get_rccoor()</a></code> receives the coordinates (<em>lat</em> and <em>lon</em>) and the spatial reference system (SRS) used to express them. The return is a tibble with the cadastral reference of the property in that spatial point, including also other information as the address (town street and number).</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/catr_ovc_rccoor.html">catr_ovc_rccoor</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/catr_ovc_get_rccoor.html">catr_ovc_get_rccoor</a></span><span class="op">(</span>
   lat <span class="op">=</span> <span class="fl">38.6196566583596</span>,
   lon <span class="op">=</span> <span class="op">-</span><span class="fl">3.45624183836806</span>,
   srs <span class="op">=</span> <span class="st">"4230"</span>
@@ -233,9 +234,9 @@
 </tr>
 </tbody>
 </table>
-<p>It is also possible to get all the cadastral references in a square of 50-meters’ side centered in the coordinates <em>lat</em> and <em>lon</em> through the function <code><a href="../reference/catr_ovc_rccoor_distancia.html">catr_ovc_rccoor_distancia()</a></code>.</p>
+<p>It is also possible to get all the cadastral references in a square of 50-meters’ side centered in the coordinates <em>lat</em> and <em>lon</em> through the function <code><a href="../reference/catr_ovc_get_rccoor_distancia.html">catr_ovc_get_rccoor_distancia()</a></code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/catr_ovc_rccoor_distancia.html">catr_ovc_rccoor_distancia</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/catr_ovc_get_rccoor_distancia.html">catr_ovc_get_rccoor_distancia</a></span><span class="op">(</span>
   lat <span class="op">=</span> <span class="fl">40.96002</span>,
   lon <span class="op">=</span> <span class="op">-</span><span class="fl">5.663408</span>,
   srs <span class="op">=</span> <span class="st">"4230"</span>
@@ -313,9 +314,9 @@
 <div class="section level2">
 <h2 id="geocoding-a-cadastral-reference">Geocoding a Cadastral Reference<a class="anchor" aria-label="anchor" href="#geocoding-a-cadastral-reference"></a>
 </h2>
-<p>The opposite query is possible as well. Being given to the function <code><a href="../reference/catr_ovc_cpmrc.html">catr_ovc_cpmrc()</a></code> a cadastral reference (<code>rc</code>), the province (<code>province</code>) and the town (<code>municipality</code>), <code><a href="../reference/catr_ovc_cpmrc.html">catr_ovc_cpmrc()</a></code> returns its coordinates <em>lat</em> and <em>lon</em> in a particular <em>SRS</em> besides the address (town, street and number).</p>
+<p>The opposite query is possible as well. Being given to the function <code><a href="../reference/catr_ovc_get_cpmrc.html">catr_ovc_get_cpmrc()</a></code> a cadastral reference (<code>rc</code>), the province (<code>province</code>) and the town (<code>municipality</code>), <code><a href="../reference/catr_ovc_get_cpmrc.html">catr_ovc_get_cpmrc()</a></code> returns its coordinates <em>lat</em> and <em>lon</em> in a particular <em>SRS</em> besides the address (town, street and number).</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/catr_ovc_cpmrc.html">catr_ovc_cpmrc</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/catr_ovc_get_cpmrc.html">catr_ovc_get_cpmrc</a></span><span class="op">(</span>
   rc <span class="op">=</span> <span class="st">"13077A01800039"</span>,
   srs <span class="op">=</span> <span class="st">"4230"</span>,
   province <span class="op">=</span> <span class="st">"CIUDAD REAL"</span>,
@@ -360,9 +361,9 @@
 <td align="left">DS DISEMINADO Polígono 18 Parcela 39 000100200VH67C EL TIRADERO. SANTA CRUZ DE MUDELA (CIUDAD REAL)</td>
 </tr></tbody>
 </table>
-<p>Neither the <code>province</code> nor <code>municipality</code> are required to be passed to the function, unless the argument <code>municipality</code> is not <code>NULL</code>, in that case the argument <code>province</code> is needed to be passed. If it is passed a value to the <code>province</code> argument while the <code>municipality</code> argument is <code>NULL</code>, the function <code><a href="../reference/catr_ovc_cpmrc.html">catr_ovc_cpmrc()</a></code> will throw a message and would return a tibble with no data.</p>
+<p>Neither the <code>province</code> nor <code>municipality</code> are required to be passed to the function, unless the argument <code>municipality</code> is not <code>NULL</code>, in that case the argument <code>province</code> is needed to be passed. If it is passed a value to the <code>province</code> argument while the <code>municipality</code> argument is <code>NULL</code>, the function <code><a href="../reference/catr_ovc_get_cpmrc.html">catr_ovc_get_cpmrc()</a></code> will throw a message and would return a tibble with no data.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/catr_ovc_cpmrc.html">catr_ovc_cpmrc</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/catr_ovc_get_cpmrc.html">catr_ovc_get_cpmrc</a></span><span class="op">(</span>
   rc <span class="op">=</span> <span class="st">"13077A01800039"</span>,
   municipality <span class="op">=</span> <span class="st">"SANTA CRUZ DE MUDELA"</span>
 <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
@@ -382,7 +383,7 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
 <span class="co"># No warning, get the result</span>
-<span class="fu"><a href="../reference/catr_ovc_cpmrc.html">catr_ovc_cpmrc</a></span><span class="op">(</span>rc <span class="op">=</span> <span class="st">"13077A01800039"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+<span class="fu"><a href="../reference/catr_ovc_get_cpmrc.html">catr_ovc_get_cpmrc</a></span><span class="op">(</span>rc <span class="op">=</span> <span class="st">"13077A01800039"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <table style="width:100%;" class="table">
 <colgroup>
@@ -452,7 +453,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md text-center text-lg-start">
-        <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+        <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
       </div>
       <div class="col-md offset-md-4 text-center text-lg-start">
       <p>Template <a href="https://github.com/ropenspain/rostemplate/" class="external-link">rostemplate</a> by <a href="https://github.com/dieghernan/" class="external-link">dieghernan</a>, based on <a href="https://bootstrapious.com/" class="external-link">Bootstrapious</a>.
